@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    height: 100%;
+}
+
+#top-con {
+    background-image: url(gokhan1.jpg);
+    background-size: cover; /* Resmi container'a sığdırır, taşan kısımları kırpar */
+    background-position: center; /* Resmi dikey ve yatay olarak ortalar */
+    background-repeat: no-repeat; /* Resmin tekrar etmesini engeller */
+    height: 100vh; /* Container'ın yüksekliğini tam ekran yapar */
+    width: 100%; /* Container'ın genişliğini tam ekran yapar */
+    display: flex; /* Flexbox ile hizalama yapacağız */
+    flex-direction: column; /* İçeriği dikey olarak hizala */
+    justify-content: center; /* Yatayda ortalama */
+    align-items: center; /* Dikeyde ortalama */
+    text-align: center;
+    position: relative;
+}
+
+/* Overlay katmanını ekleyin */
+#top-con::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Karartma efekti */
+    z-index: 1; /* Overlay katmanı yazıların altına gelir */
+}
+
+/* Yazıyı ortalamak için */
+#top-con h1 {
+    position: relative;
+    z-index: 2; /* Yazıyı overlay katmanının üstüne yerleştirir */
+    font-size: 70px; /* Yazı boyutu */
+    color: aliceblue; /* Yazı rengi */
+}
+
+/* Butonları yan yana dizmek için Flexbox kullanıyoruz */
+#top-con .button-container {
+    display: flex; /* Flexbox düzenini aktif et */
+    justify-content: center; /* Butonları yatayda ortala */
+    gap: 20px; /* Butonlar arasında boşluk bırak */
+    z-index: 2;
+}
+
+/* Buton stilini ayarlayalım */
+#top-con button {
+    padding: 15px 30px; /* Buton boyutları */
+    font-size: 15px; /* Buton yazı boyutu */
+    color: white; /* Buton yazı rengi */
+    background-color: transparent; /* Arka planı şeffaf yap */
+    border: 2px solid white; /* Buton kenarını beyaz yap */
+    border-radius: 5px; /* Kenarları yuvarlak yapar */
+    cursor: pointer; /* Butona tıklanabilir işareti verir */
+}
+
+#top-con button:hover {
+    background-color: rgba(255, 255, 255, 0.466); /* Hover efekti */
+}
+
+.card {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+.card a {
+    border: none;
+    background-color: rgb(124, 124, 124);
+    color: aliceblue;
+}
+
+.card-img-top {
+    width: 100%; /* Resmin genişliğini %100 yaparak kartın genişliğine uymasını sağlarız */
+    height: 200px; /* Resmin yüksekliğini sabitleriz */
+    object-fit: cover; /* Resmin kırpılmasını sağlar, böylece en iyi şekilde görünür */
+}
+
+#mid-con h1 {
+    text-align: center;
+    color: gray;
+    font-size: 3rem; /* Başlık boyutunu büyütme */
+
+}
+
+#aboutme {
+    border: 1px solid grey;
+    border-left: none;
+    border-right: none;
+
+}
+
+#aboutme .row {
+    justify-content: center; /* Yatayda ortalar */
+    align-items: center; /* Dikeyde ortalar */
+    text-align: center;
+  }
+  
+
+#certs .col{
+    border: 1px solid rgba(0, 0, 0, 0.185);
+}
+
+
+#certs .row img {
+    max-height: 700px; 
+    width: auto; 
+  }
+
+
+#contact h1 {
+    text-align: center;
+    color: gray;
+    font-size: 3rem; /* Başlık boyutunu büyütme */
+
+}
+
+#contact * {
+    border: none;
+}
+
+#contact img {
+    max-width: 4%;
+    background-color: aliceblue;
+}
+
+
